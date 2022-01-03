@@ -35,7 +35,7 @@
     <section class="gaming_world_section mb-140">
         <div class="container">
             <div class="section_title text-center wow fadeInUp mb-60" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                <h2>yOU ARE MOST WELCOME <br>
+                <h2>YOU ARE MOST WELCOME <br>
                     IN GAMING WORLD.</h2>
             </div>
             <div class="gaming_world_inner">

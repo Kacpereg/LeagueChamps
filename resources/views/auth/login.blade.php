@@ -3,12 +3,12 @@
 @section('content')
     <!-- page wrapper start -->
 
-    <div class="page_wrapper" style="margin-top: 100px">
+    <div class="page_wrapper" style="margin-top: 100px; margin-bottom: 50px">
         <main class="login-form">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card">
+                        <div class="card upcoming_gaming_list">
                             <h3 class="card-header text-center">Login</h3>
                             <div class="card-body">
                                 <form method="POST" action="{{ route('login.custom') }}">

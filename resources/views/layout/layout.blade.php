@@ -96,7 +96,7 @@
                     <div class="main_menu d-none d-lg-block">
                         <nav>
                             <ul class="d-flex">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{route('welcome')}}">Home</a>
                                 <li><a href="match.html">Match</a>
                                     <ul class="sub_menu">
                                         <li><a href="match.html">Match Page</a></li>
@@ -104,42 +104,37 @@
                                     </ul>
                                 </li>
                                 <li><a href="#">Pages</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="all-game.html">All Game</a></li>
-                                        <li><a href="game-details.html">Game Details</a></li>
-                                        <li><a href="faq.html">Faq Page</a></li>
-                                        <li><a href="players.html">Players</a></li>
-                                        <li><a href="player-details.html">Player Details</a></li>
-                                        <li><a href="404.html">Error 404</a></li>
-                                    </ul>
+
                                 </li>
-                                <li><a href="blog-left-sidebar.html">blog</a>
-                                    <ul class="sub_menu">
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-without-sidebar.html">Blog Without Sidebar</a></li>
-                                        <li><a href="blog-grid-left-sidebar.html">Blog Grid Left Sidebar</a></li>
-                                        <li><a href="blog-grid-right-sidebar.html">Blog Grid Right Sidebar</a></li>
-                                        <li><a href="blog-grid-without-sidebar.html">Blog Grid Without Sidebar</a></li>
-                                        <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                                        <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                    </ul>
+                                <li><a href="{{route('forum')}}">Forum</a>
+
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
                     <!--main menu end-->
-                    <div class="header_right_sidebar d-flex align-items-center">
+                    @if(Auth::user())
+                        You are logged as {{Auth::user()->name}}
                         <div class="sing_up_btn">
-                            <a class="btn btn-link" href="/login">SIGN UP <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
+                            <a class="btn btn-link" href="{{route('signout')}}">SIGN OUT <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
                         </div>
-                        <div class="canvas_open">
-                            <a href="javascript:void(0)"><i class="icofont-navigation-menu"></i></a>
+                        <div class="sing_up_btn">
+                            <a class="btn btn-link" href="{{route('dashboard')}}">PROFILE <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
                         </div>
-                    </div>
+                    @else
+                        <div class="header_right_sidebar d-flex align-items-center">
+                            <div class="sing_up_btn">
+                                <a class="btn btn-link" href="/login">SIGN IN <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
+                            </div>
+                            <div class="sing_up_btn">
+                                <a class="btn btn-link" href="/registration">REGISTER <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
+                            </div>
+                            <div class="canvas_open">
+                                <a href="javascript:void(0)"><i class="icofont-navigation-menu"></i></a>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
