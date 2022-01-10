@@ -37,97 +37,20 @@
                         <div class="col-lg-8">
                             <div class="blog_page_wrapper">
                                 <div class="blog_page_inner">
+                                    @foreach($posts as $post)
                                     <div class="single_blog d-flex align-items-center">
                                         <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog1.webp" alt=""></a>
+                                            <a href="blog-details.html"><img src="{{asset('img/blog/blog1.webp')}}" alt=""></a>
                                         </div>
                                         <div class="blog_content">
                                             <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
+                                                <span><i class="icofont-calendar"></i>  {{$post->created_at}}</span>
                                             </div>
-                                            <h3><a href="blog-details.html">It long established fact that reader
-                                                distracted the readable.</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
+                                            <h3><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h3>
+                                            <a href="{{route('posts.show', $post)}}">READ MORE</a>
                                         </div>
                                     </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog2.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html">the readable content of a page when
-                                                looking at its layout.</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog3.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html">  The point of using Lorem Ipsum that
-                                                more-or-less normal</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog4.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html">distribution of letters, as opposed
-                                                using Content here</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog5.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html">It long established fact that reader
-                                                distracted the readable.</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog6.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html">the readable content of a page when
-                                                looking at its layout.</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
-                                    <div class="single_blog d-flex align-items-center">
-                                        <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog7.webp" alt=""></a>
-                                        </div>
-                                        <div class="blog_content">
-                                            <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                                            </div>
-                                            <h3><a href="blog-details.html"> The point of using Lorem Ipsum that
-                                                more-or-less normal</a></h3>
-                                            <a href="blog-details.html">READ MORE</a>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <div class="pagination pagination_pages">
                                     <ul>
@@ -213,113 +136,5 @@
 
     </div>
     <!-- page wrapper end -->
-
-    <!--footer area start-->
-    <footer class="footer_widgets">
-        <div class="main_footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="main_footer_inner d-flex">
-                            <div class="footer_widget_list">
-                                <div class="footer_logo">
-                                    <a href="#"><img src="assets/img/logo/logo.webp" alt=""></a>
-                                </div>
-                                <div class="footer_contact_desc">
-                                    <p>It long estabhed fact that reader
-                                        will ditracted the readable content
-                                        looking using readable.</p>
-                                </div>
-                                <div class="footer_social">
-                                    <ul class="d-flex">
-                                        <li><a class="facebook" href="https://www.facebook.com"><i class="icofont-facebook"></i></a></li>
-                                        <li><a class="dribbble" href="https://dribbble.com"><i class="icofont-dribbble"></i></a></li>
-                                        <li><a class="youtube" href="https://www.youtube.com"><i class="icofont-youtube-play"></i></a></li>
-                                        <li><a class="twitter" href="https://twitter.com"><i class="icofont-twitter"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="footer_widget_list contact">
-                                <h3>Contact</h3>
-                                <div class="footer_contact_info">
-                                    <div class="footer_contact_info_list">
-                                        <span>Location:</span>
-                                        <p>136 Harding Ave
-                                            Wheeling, West Virginia</p>
-                                    </div>
-                                    <div class="footer_contact_info_list">
-                                        <span>Phone:</span>
-                                        <p><a href="#">00 (62) 632 867 4497</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footer_widget_list">
-                                <h3>today’s winners</h3>
-                                <div class="footer_winners_gallery">
-                                    <div class="footer_winners_list d-flex">
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners1.webp" alt=""></a>
-                                        </div>
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners2.webp" alt=""></a>
-                                        </div>
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners3.webp" alt=""></a>
-                                        </div>
-                                    </div>
-                                    <div class="footer_winners_list d-flex">
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners4.webp" alt=""></a>
-                                        </div>
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners5.webp" alt=""></a>
-                                        </div>
-                                        <div class="footer_winners_thumb">
-                                            <a href="game-details.html"><img src="assets/img/others/winners6.webp" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footer_widget_list footer_list_menu">
-                                <h3>Content</h3>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="about.html"> Copywriting</a></li>
-                                        <li><a href="about.html">Social Media</a></li>
-                                        <li><a href="about.html">Interactive Media</a></li>
-                                        <li><a href="about.html">Motion Design</a></li>
-                                        <li><a href="about.html">Illustration</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer_bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="footer_bottom_inner d-flex justify-content-between">
-                            <div class="copyright_right">
-                                <p> © 2021  BONX  Made with  <i class="icofont-heart"></i>  by <a href="https://hasthemes.com">HasThemes</a></p>
-                            </div>
-                            <div class="footer_bottom_link_menu">
-                                <ul class="d-flex">
-                                    <li><a href="about.html">Terms & Condition  </a></li>
-                                    <li><a href="about.html">Privacy Policy  </a></li>
-                                </ul>
-                            </div>
-                            <div class="scroll__top_icon">
-                                <a id="scroll-top" href="#"><img src="assets/img/icon/scroll-top.webp" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--footer area end-->
 
 @endsection

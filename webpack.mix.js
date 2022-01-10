@@ -38,6 +38,9 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .postCss('resources/css/vendor/bootstrap.min.css', 'public/css', [
         //
+    ])
+    .postCss('resources/css/custom.css', 'public/css', [
+        //
     ]);
 
 mix.scripts('resources/js/vendor/modernizr-3.7.1.min.js', 'public/js/vendor/modernizr-3.7.1.min.js');

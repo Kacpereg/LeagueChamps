@@ -19,16 +19,24 @@ class ForumController extends Controller
             'title'=>'required',
             'text'=>'required',
         ]);
-        return Post::create([
+        $post= Post::create([
             'title' => $request->get('title'),
             'text' => $request->get('text'),
             'user_id' => Auth::id()
         ]);
+        return $this->showPost($post);
     }
 
     public function showPost(Post $post)
     {
-        return $post;
+        $user=$post->getUser();
+        return view('posts.show', compact('post','user'));
+    }
+
+    public function list()
+    {
+        $posts=Post::all();
+        return view('forum.forum', compact('posts'));
     }
 
     public function addComment(Request $request)

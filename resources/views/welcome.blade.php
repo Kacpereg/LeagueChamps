@@ -10,15 +10,15 @@
 <div class="page_wrapper">
 
     <!--slide banner section start-->
-    <section class="hero_banner_section d-flex align-items-center mb-130" data-bgimg="assets/img/bg/hero-bg1.webp">
+    <section class="hero_banner_section d-flex align-items-center mb-130" style="background-image: url('img/bg/img1.jpg'); margin-top: 100">
         <div class="container">
             <div class="hero_banner_inner">
                 <div class="row align-items-center">
                     <div class="col-12">
                         <div class="hero_content">
-                            <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">Best Game <br>
-                                Playing Today.</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">Simply text of the printing and typesetting industry.</p>
+                            <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">League <br>
+                                Champs</h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">Best League Of Legends Custom Tournaments.</p>
                             <a class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="all-game.html">Play Now <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
                         </div>
                     </div>

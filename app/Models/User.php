@@ -20,6 +20,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'server',
+        'ign',
+        'avatar',
+        'desc',
+        'mainrole',
+        'mainchamp',
         'date_of_birth',
         'password',
     ];

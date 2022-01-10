@@ -21,13 +21,15 @@
     <link rel="stylesheet" href="{{ mix("css/animate.css") }}">
     <link rel="stylesheet" href="{{ mix("css/bootstrap.min.css") }}">
     <link rel="stylesheet" href="{{ mix("css/style.css") }}">
+    <link rel="stylesheet" href="{{ mix("css/custom.css") }}">
     <link rel="stylesheet" href="{{ mix("css/slick.css") }}">
     <link rel="stylesheet" href="{{ mix("css/icofont.min.css") }}">
     <link rel="stylesheet" href="{{ mix("css/nice-select.css") }}">
     <link rel="stylesheet" href="{{ mix("css/magnific-popup.css") }}">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
-<body class="body__bg" data-bgimg="{{ asset('img/bg/body-bg.webp') }}">
+<body class="body__bg" style="background-image: url('img/bg/body-bg.webp')">
 
 <!--offcanvas menu area start-->
 <div class="offcanvas_menu">
@@ -120,7 +122,7 @@
                             <a class="btn btn-link" href="{{route('signout')}}">SIGN OUT <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
                         </div>
                         <div class="sing_up_btn">
-                            <a class="btn btn-link" href="{{route('dashboard')}}">PROFILE <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
+                            <a class="btn btn-link" href="{{route('profile')}}">PROFILE <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
                         </div>
                     @else
                         <div class="header_right_sidebar d-flex align-items-center">

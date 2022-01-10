@@ -31,6 +31,14 @@
                                     </div>
 
                                     <div class="form-group mb-3">
+                                        <select name="server" class="form-control">
+                                            <option value="EUW" selected>EUW</option>
+                                            <option value="EUNE">EUNE</option>
+                                            <option value="NA">NA</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
                                         <input type="date" placeholder="date" id="date_of_birth" class="form-control"
                                                name="date_of_birth" required>
                                         @if ($errors->has('date_of_birth'))

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CustomAuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForumController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,15 +23,9 @@ Route::get('/layout', function () {
     return view('adminlte.layout');
 })->name('dashboard');
 
-Route::get('/forum', function () {
-    return view('forum.forum');
-})->name('forum');
-
 Route::get('/contact', function () {
     return view('contact.contact');
 })->name('contact');
-
-Route::post('/posts/{post}', [ForumController::class, 'showPost'])->name('posts.show');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::post('/posts/store', [ForumController::class, 'storePost'])->name('posts.store');
@@ -40,9 +34,16 @@ Route::group(['middleware' => ['auth']], function () {
     })->name('posts.create');
 });
 
-Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
-Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
-Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
-Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::get('/forum', [ForumController::class, 'list'])->name('forum');
+Route::get('/posts/{post}', [ForumController::class, 'showPost'])->name('posts.show');
+Route::get('/profile', [UserController::class, 'profile'])->name('profile');
+Route::get('/profile/edit', [UserController::class, 'edit'])->name('edit');
+Route::post('/profile/update', [UserController::class, 'update'])->name('update');
+
+
+Route::get('dashboard', [UserController::class, 'dashboard']);
+Route::get('login', [UserController::class, 'index'])->name('login');
+Route::post('custom-login', [UserController::class, 'customLogin'])->name('login.custom');
+Route::get('registration', [UserController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [UserController::class, 'customRegistration'])->name('register.custom');
+Route::get('signout', [UserController::class, 'signOut'])->name('signout');

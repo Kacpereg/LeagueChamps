@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*  
+/*
     CSS INDEX
     =========================================
     01. header css here
@@ -176,7 +176,7 @@ figure {
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-/*-- 
+/*--
     - Common Classes
 -----------------------------------------*/
 .fix {
@@ -511,7 +511,7 @@ figure {
   color: #000000;
 }
 
-/*-- 
+/*--
     - Background color
 -----------------------------------------*/
 .bg-white {
@@ -526,7 +526,7 @@ figure {
   background: #354b65;
 }
 
-/*-- 
+/*--
     - Input Placeholder
 -----------------------------------------*/
 input:-moz-placeholder, textarea:-moz-placeholder {
@@ -1582,7 +1582,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .hero_content h1 {
   margin-bottom: 41px;
-  font-family: "Metal Mania", cursive;
+  font-family: "Permanent Marker", cursive;
   text-shadow: 3px 3px 0px #b154f0;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -6730,3 +6730,4 @@ section.error_section {
   top: 0;
   left: 0;
 }
+

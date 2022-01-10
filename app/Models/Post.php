@@ -13,4 +13,9 @@ class Post extends Model
         'text',
     ];
 
+    public function getUser()
+    {
+        return User::find($this->user_id);
+    }
+
 }

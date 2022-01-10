@@ -19359,6 +19359,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/custom.css":
+/*!**********************************!*\
+  !*** ./resources/css/custom.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -19745,6 +19758,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 			"css/animate": 0,
 /******/ 			"css/adminlte.min": 0,
 /******/ 			"css/app": 0,
+/******/ 			"css/custom": 0,
 /******/ 			"css/bootstrap.min": 0,
 /******/ 			"css/style": 0,
 /******/ 			"css/slick": 0,
@@ -19798,16 +19812,17 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/app.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/adminlte.min.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/animate.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/icofont.min.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/magnific-popup.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/nice-select.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/slick.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/style.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/vendor/bootstrap.min.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/adminlte.min.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/animate.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/icofont.min.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/magnific-popup.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/nice-select.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/slick.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/style.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/vendor/bootstrap.min.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/magnific-popup","css/icofont.min","css/animate","css/adminlte.min","css/app","css/custom","css/bootstrap.min","css/style","css/slick","css/nice-select"], () => (__webpack_require__("./resources/css/custom.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
