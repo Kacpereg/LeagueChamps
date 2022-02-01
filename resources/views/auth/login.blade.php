@@ -1,6 +1,27 @@
 @extends('.layout.layout')
 
 @section('content')
+
+    <!-- breadcrumbs area start -->
+    <div class="breadcrumbs_aree breadcrumbs_bg" style = "background-image: url('img/bg/breadcrumbs-bg.webp')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs_text text-center">
+                        <h1>SIGN IN</h1>
+                        <ul class="d-flex justify-content-center">
+                            <li><a href="{{route('welcome')}}">Home </a></li>
+                            <li> <span>//</span></li>
+                            <li>Login</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- breadcrumbs area end -->
+
     <!-- page wrapper start -->
 
     <div class="page_wrapper" style="margin-top: 100px; margin-bottom: 50px">
@@ -38,6 +59,10 @@
 
                                     <div class="d-grid mx-auto">
                                         <button type="submit" class="btn btn-dark btn-block">Signin</button>
+                                    </div>
+                                    <div class="mt-3">
+                                        <span>Don't have account?</span>
+                                        <span><a href="{{route('register-user')}}">Register</a></span>
                                     </div>
                                 </form>
 

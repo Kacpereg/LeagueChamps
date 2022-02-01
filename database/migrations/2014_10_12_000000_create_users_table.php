@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name')->unique();
             $table->string('email')->unique();
             $table->enum('server',['EUW','EUNE','NA']);
-            $table->string('ign')->unique()->nullable();
+            $table->string('ign')->unique();
             $table->string('avatar')->nullable();
             $table->text('desc')->nullable();
             $table->string('mainrole')->nullable();

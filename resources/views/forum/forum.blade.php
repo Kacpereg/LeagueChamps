@@ -2,22 +2,20 @@
 
 @section('content')
 
-<body class="body__bg" data-bgimg="assets/img/bg/body-bg2.webp">
-
     <!-- breadcrumbs area start -->
-    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" data-bgimg="assets/img/bg/breadcrumbs-bg.webp">
+    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" style = "background-image: url('img/bg/breadcrumbs-bg.webp')">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text text-center">
                         <h1>Forum</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li>discussions</li>
                         </ul>
                     </div>
-                    <div class="sing_up_btn text-center mt-5">
+                    <div class="sing_up_btn text-center">
                         <a class="btn btn-link" href="{{route('posts.create')}}">CREATE A POST <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
                     </div>
                 </div>
@@ -40,11 +38,11 @@
                                     @foreach($posts as $post)
                                     <div class="single_blog d-flex align-items-center">
                                         <div class="blog_thumb">
-                                            <a href="blog-details.html"><img src="{{asset('img/blog/blog1.webp')}}" alt=""></a>
+                                            <a href={{route('posts.show', $post)}}><img src="{{$post->getUser()->avatar ? asset('/storage/avatars/' . $post->getUser()->avatar) :asset('/images/defaultavatar.png')}}" alt=""></a>
                                         </div>
                                         <div class="blog_content">
                                             <div class="blog_date">
-                                                <span><i class="icofont-calendar"></i>  {{$post->created_at}}</span>
+                                                <span><i class="icofont-calendar"></i>  {{$post->created_at}} by {{$post->getUser()->name}}</span>
                                             </div>
                                             <h3><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h3>
                                             <a href="{{route('posts.show', $post)}}">READ MORE</a>
@@ -87,9 +85,9 @@
                                     </div>
                                 </div>
                                 <div class="blog_widget_thumb mb-50">
-                                    <img src="assets/img/blog/blog-sidebar-thumb.webp" alt="">
+                                    <img src="{{asset('img/custom/freljord.webp')}}" alt="">
                                     <div class="widget_play_btn">
-                                        <a class="btn btn-link" href="all-game.html">Play Now <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                        <a class="btn btn-link" href="all-game.html">Play Now <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                                     </div>
                                 </div>
                                 <div class="blog_widget_list tags">

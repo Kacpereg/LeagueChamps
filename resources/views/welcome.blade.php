@@ -10,7 +10,7 @@
 <div class="page_wrapper">
 
     <!--slide banner section start-->
-    <section class="hero_banner_section d-flex align-items-center mb-130" style="background-image: url('img/bg/img1.jpg'); margin-top: 100">
+    <section class="hero_banner_section d-flex align-items-center mb-130" style="background-image: url('img/bg/img1.jpg'); margin-top: 120px">
         <div class="container">
             <div class="hero_banner_inner">
                 <div class="row align-items-center">
@@ -18,8 +18,8 @@
                         <div class="hero_content">
                             <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">League <br>
                                 Champs</h1>
-                            <p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">Best League Of Legends Custom Tournaments.</p>
-                            <a class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="all-game.html">Play Now <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1.2s">Become a legend.</p>
+                            <a class="btn btn-link wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.3s" href="{{route('register-user')}}">Play Now <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                         </div>
                     </div>
                 </div>
@@ -41,9 +41,9 @@
             <div class="gaming_world_inner">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single_gaming_world wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg1.webp" data-wow-delay="0.1s" data-wow-duration="1.1s">
+                        <div class="single_gaming_world wow fadeInUp" style="background-image: url('img/others/gaming-world-bg1.webp')" data-wow-delay="0.1s" data-wow-duration="1.1s">
                             <div class="gaming_world_thumb">
-                                <img src="assets/img/others/gaming-world1.webp" alt="">
+                                <img src={{asset('img/custom/twitch.png')}} alt="">
                             </div>
                             <div class="gaming_world_text">
                                 <h3>Live Streaming</h3>
@@ -54,9 +54,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single_gaming_world wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg2.webp" data-wow-delay="0.2s" data-wow-duration="1.2s">
+                        <div class="single_gaming_world wow fadeInUp" style="background-image: url('img/others/gaming-world-bg2.webp')" data-wow-delay="0.2s" data-wow-duration="1.2s">
                             <div class="gaming_world_thumb">
-                                <img src="assets/img/others/gaming-world2.webp" alt="">
+                                <img src={{asset('img/custom/reddit.png')}} alt="">
                             </div>
                             <div class="gaming_world_text">
                                 <h3>Game News</h3>
@@ -67,9 +67,9 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single_gaming_world wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg3.webp" data-wow-delay="0.3s" data-wow-duration="1.3s">
+                        <div class="single_gaming_world wow fadeInUp" style="background-image: url('img/others/gaming-world-bg2.webp')" data-wow-delay="0.3s" data-wow-duration="1.3s">
                             <div class="gaming_world_thumb">
-                                <img src="assets/img/others/gaming-world3.webp" alt="">
+                                <img src={{asset('img/custom/lol.png')}} alt="">
                             </div>
                             <div class="gaming_world_text">
                                 <h3>Game Tournaments</h3>
@@ -103,18 +103,18 @@
                             ]
                         }'>
                         <div class="gaming_video_thumb">
-                            <img src="assets/img/bg/gaming-bg1.webp" alt="">
+                            <img src="{{asset('img/custom/streampic.webp')}}" alt="">
                             <div class="gaming_video_paly_icon">
-                                <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="assets/img/others/play-btn.webp" alt=""></a>
+                                <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="{{asset('img/others/play-btn.webp')}}" alt=""></a>
                             </div>
                             <div class="live_streaming_text">
                                 <h3>Watch Live Streaming</h3>
                             </div>
                         </div>
                         <div class="gaming_video_thumb">
-                            <img src="assets/img/bg/gaming-bg1.webp" alt="">
+                            <img src="{{asset('img/custom/streampic.webp')}}" alt="">
                             <div class="gaming_video_paly_icon">
-                                <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="assets/img/others/play-btn.webp" alt=""></a>
+                                <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="{{asset('img/others/play-btn.webp')}}" alt=""></a>
                             </div>
                             <div class="live_streaming_text">
                                 <h3>Watch Live Streaming</h3>
@@ -131,80 +131,23 @@
     <section class="upcoming_gaming_section mb-125">
         <div class="container">
             <div class="section_title text-center wow fadeInUp mb-60" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                <h2>Upcoming Match</h2>
-                <p>When unknown printer took type and scrambled it to make <br>
-                    type specimen book centuries,</p>
+                <h2>Upcoming Tournaments</h2>
             </div>
             <div class="upcoming_gaming_inner">
-                <div class="upcoming_gaming_list wow fadeInUp d-flex justify-content-between align-items-center mb-30" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                    <div class="upcoming_gaming_text">
-                        <p>20 August 2021  -  09:00 PM</p>
-                        <h3><a href="match-details.html">Roar Spring Game 2021</a></h3>
-                        <span>08 Teams Registered</span>
-                    </div>
-                    <div class="upcoming_play_video text-center">
-                        <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="assets/img/others/play-btn2.webp" alt=""></a> <br>
-                        <span>Live Stream</span>
-                    </div>
-                    <div class="upcoming_gaming_thumb d-flex align-items-center">
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb1.webp" alt="">
+                @foreach($tournaments as $tournament)
+                    <div class="upcoming_gaming_list wow fadeInUp d-flex justify-content-between align-items-center" data-wow-delay="0.3s" data-wow-duration="1.3s">
+                        <div class="upcoming_gaming_text">
+                            <p>{{$tournament->date}}</p>
+                            <h3><a href="{{route('tournament.show', $tournament->id)}}">Tournament {{$tournament->id}}</a></h3>
+                            <span>1 vs 1 Howling Abyss</span>
                         </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/game-vs1.webp" alt="">
-                        </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb2.webp" alt="">
+                        <div class="upcoming_gaming_thumb d-flex align-items-center">
+                            <div >
+                                <a href="{{route('tournament.show', $tournament->id)}}"><img src="{{asset('img/custom/aram.webp')}}" alt=""></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="upcoming_gaming_list wow fadeInUp d-flex justify-content-between align-items-center mb-30" data-wow-delay="0.2s" data-wow-duration="1.2s">
-                    <div class="upcoming_gaming_text">
-                        <p>20 August 2021  -  09:00 PM</p>
-                        <h3><a href="match-details.html">Skrit tournament 2021</a></h3>
-                        <span>08 Teams Registered</span>
-                    </div>
-                    <div class="upcoming_play_video text-center">
-                        <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="assets/img/others/play-btn2.webp" alt=""></a> <br>
-                        <span>Youtube Stream</span>
-                    </div>
-                    <div class="upcoming_gaming_thumb d-flex align-items-center">
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb3.webp" alt="">
-                        </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/game-vs2.webp" alt="">
-                        </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb4.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="upcoming_gaming_list wow fadeInUp d-flex justify-content-between align-items-center" data-wow-delay="0.3s" data-wow-duration="1.3s">
-                    <div class="upcoming_gaming_text">
-                        <p>20 August 2021  -  09:00 PM</p>
-                        <h3><a href="match-details.html">Ninja 360 Game 2021</a></h3>
-                        <span>08 Teams Registered</span>
-                    </div>
-                    <div class="upcoming_play_video text-center">
-                        <a class="video_popup" href="https://www.youtube.com/watch?v=eS9Qm4AOOBY"><img src="assets/img/others/play-btn2.webp" alt=""></a> <br>
-                        <span>Twitch Stream</span>
-                    </div>
-                    <div class="upcoming_gaming_thumb d-flex align-items-center">
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb5.webp" alt="">
-                        </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/game-vs3.webp" alt="">
-                        </div>
-                        <div class="single_upcoming_thumb">
-                            <img src="assets/img/others/upcoming-game-thumb6.webp" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="others_match_btn text-center">
-                <a class="btn btn-link" href="match.html">Other’s Match </a>
+                @endforeach
             </div>
         </div>
     </section>
@@ -259,33 +202,33 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="popular_gaming_thumb">
-                            <a href="#"><img src="assets/img/others/popular-game-thumb1.webp" alt=""></a>
+                            <a href="#"><img src="{{asset('img/custom/lolpic2.webp')}}" alt=""></a>
                             <div class="gaming_details_btn">
-                                <a class="btn btn-link" href="game-details.html">Game Details <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                <a class="btn btn-link" href="game-details.html">Game Details <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="popular_gaming_thumb">
-                            <a href="#"><img src="assets/img/others/popular-game-thumb2.webp" alt=""></a>
+                            <a href="#"><img src="{{asset('img/custom/lolpic1.webp')}}" alt=""></a>
                             <div class="gaming_details_btn">
-                                <a class="btn btn-link" href="game-details.html">Game Details <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                <a class="btn btn-link" href="game-details.html">Game Details <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="popular_gaming_thumb">
-                            <a href="#"><img src="assets/img/others/popular-game-thumb3.webp" alt=""></a>
+                            <a href="#"><img src="{{asset('img/custom/lolpic3.webp')}}" alt=""></a>
                             <div class="gaming_details_btn">
-                                <a class="btn btn-link" href="game-details.html">Game Details <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                <a class="btn btn-link" href="game-details.html">Game Details <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="popular_gaming_thumb">
-                            <a href="#"><img src="assets/img/others/popular-game-thumb4.webp" alt=""></a>
+                            <a href="#"><img src="{{asset('img/custom/lolpic4.webp')}}" alt=""></a>
                             <div class="gaming_details_btn">
-                                <a class="btn btn-link" href="game-details.html">Game Details <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                <a class="btn btn-link" href="game-details.html">Game Details <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                             </div>
                         </div>
                     </div>
@@ -296,13 +239,13 @@
     <!-- popular gaming section end -->
 
     <!-- testimonial section start -->
-    <section class="testimonial_section wow fadeInUp" data-bgimg="assets/img/others/testimonial-bg-fullwidth.webp" data-wow-delay="0.1s" data-wow-duration="1.1s">
+    <section class="testimonial_section wow fadeInUp" style="background-image: url('/img/others/testimonial-bg-fullwidth.webp')" data-wow-delay="0.1s" data-wow-duration="1.1s">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section_title mb-60">
-                        <h2>What people’s say <br>
-                            ABOUT <span>game studio.</span></h2>
+                        <h2>What people say <br>
+                            ABOUT <span>League Champs.</span></h2>
                     </div>
                     <div class="testimonial_inner slick__activation slick_navigation" data-slick='{
                             "slidesToShow": 1,
@@ -315,10 +258,10 @@
                             "responsive":[
                             {"breakpoint":576, "settings": { "slidesToShow": 1 } }
                             ]
-                        }' data-bgimg="assets/img/others/testimonial-bg.webp">
+                        }' style="background-image: url('/img/others/testimonial-bg.webp')">
                         <div class="testimonial_list d-flex align-items-center">
                             <div class="testimonial_thumb">
-                                <img src="assets/img/others/testimonial-thumb.webp" alt="">
+                                <img src={{asset('img/custom/caedrel.webp')}} alt="">
                             </div>
                             <div class="testimonial_content">
                                 <div class="testimonial_desc">
@@ -329,22 +272,27 @@
                                         many desktop publishing packages and web page now editors.</p>
                                 </div>
                                 <div class="testimonial_author">
-                                    <h3>Randolph Frazier</h3>
+                                    <h3>Caedrel</h3>
                                     <span>Top Rated Gamer</span>
                                 </div>
                             </div>
                         </div>
                         <div class="testimonial_list d-flex align-items-center">
                             <div class="testimonial_thumb">
-                                <img src="assets/img/others/testimonial-thumb.webp" alt="">
+                                <img src={{asset('img/custom/lscoach.webp')}} alt="">
                             </div>
                             <div class="testimonial_content">
                                 <div class="testimonial_desc">
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quos consectetur amet blanditiis, facilis esse illo unde saepe facere dolore porro asperiores ducimus, inventore voluptate doloribus odio fugit magnam voluptatum perferendis? Sit quisquam labore adipisci doloremque! Aperiam voluptate modi quasi are nobis.</p>
+                                    <p>
+                                        "League of Legends"to przede wszystkim darmowa gra.
+                                        Riot Games zarabia na niej poprzez mikropłatności.
+                                        Bardzo cieszy fakt, że wszystko, co w tej grze ma wpływ na jakość prowadzonej przez nas gry, możemy kupić za wirtualne pieniądze.
+                                        Większość dodatków kosmetycznych wymaga sięgnięcia po prawdziwą gotówkę.
+                                    </p>
                                 </div>
                                 <div class="testimonial_author">
-                                    <h3>Roar Spring</h3>
-                                    <span>Top Rated Gamer</span>
+                                    <h3>LS</h3>
+                                    <span>Top Rated Coach</span>
                                 </div>
                             </div>
                         </div>
@@ -359,68 +307,27 @@
     <section class="blog_section mb-90">
         <div class="container">
             <div class="section_title text-center wow fadeInUp mb-70" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                <h2>Latest Blog</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut labore et dolore magna</p>
+                <h2><a href="{{route('forum')}}">Latest Posts</a></h2>
+                <p>Read what other players think and share <br> your opinion on forum</p>
             </div>
+
             <div class="row blog_inner">
+                @foreach($posts as $post)
                 <div class="col-lg-6">
                     <div class="single_blog d-flex align-items-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
                         <div class="blog_thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog1.webp" alt=""></a>
+                            <a href="blog-details.html"><img src="{{$post->getUser()->avatar ? asset('/storage/avatars/' . $post->getUser()->avatar) :asset('/images/defaultavatar.png')}}" alt=""></a>
                         </div>
                         <div class="blog_content">
                             <div class="blog_date">
-                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
+                                <span><i class="icofont-calendar"></i>  {{$post->created_at}} by {{$post->getUser()->name}}</span>
                             </div>
-                            <h3><a href="blog-details.html">if you have seen Apple's
-                                    recent jabs.</a></h3>
-                            <a href="blog-details.html">READ MORE</a>
+                            <h3><a href="{{route('posts.show', $post)}}">{{$post->title}}</a></h3>
+                            <a href="{{route('posts.show', $post)}}">READ MORE</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="single_blog d-flex align-items-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                        <div class="blog_thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog2.webp" alt=""></a>
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_date">
-                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                            </div>
-                            <h3><a href="blog-details.html">Lorem ipsum dolor sit amet, adipisicing elit.</a></h3>
-                            <a href="blog-details.html">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single_blog d-flex align-items-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                        <div class="blog_thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog3.webp" alt=""></a>
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_date">
-                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                            </div>
-                            <h3><a href="blog-details.html"> Perferendis hic sint are rem, incidunt vitae.</a></h3>
-                            <a href="blog-details.html">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single_blog d-flex align-items-center wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="1.1s">
-                        <div class="blog_thumb">
-                            <a href="blog-details.html"><img src="assets/img/blog/blog4.webp" alt=""></a>
-                        </div>
-                        <div class="blog_content">
-                            <div class="blog_date">
-                                <span><i class="icofont-calendar"></i>  20 January 2021</span>
-                            </div>
-                            <h3><a href="blog-details.html">if you have seen Apple's
-                                    recent jabs.</a></h3>
-                            <a href="blog-details.html">READ MORE</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -431,13 +338,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="gaming_update_inner d-flex justify-content-between align-items-center" data-bgimg="assets/img/bg/gaming-update.webp">
+                    <div class="gaming_update_inner d-flex justify-content-between align-items-center" style="background-image: url('img/custom/porowide.webp')">
                         <div class="gaming_update_text">
-                            <h2>Connect with us <br>
-                                for gamING update.</h2>
+                            <h2>Create LeagueChamps<br>
+                                Account for free</h2>
                         </div>
                         <div class="gaming_update_btn">
-                            <a class="btn btn-link" href="contact.html">CONNECT NOW <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                            <a class="btn btn-link" href="{{route('register-user')}}">Register <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                         </div>
                     </div>
                 </div>

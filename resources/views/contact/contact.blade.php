@@ -3,14 +3,14 @@
 @section('content')
 
     <!-- breadcrumbs area start -->
-    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" data-bgimg="assets/img/bg/breadcrumbs-bg.webp">
+    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" style = "background-image: url('img/bg/breadcrumbs-bg.webp')">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text text-center">
                         <h1>Contact us</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li>  CONTACT</li>
                         </ul>
@@ -29,7 +29,7 @@
                 <div class="contact_info_area">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="contact_info_list left wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg1.webp" data-wow-delay="0.1s" data-wow-duration="1.1s">
+                            <div class="contact_info_list left wow fadeInUp" style="background-image: url('/img/others/gaming-world-bg1.webp')" data-wow-delay="0.1s" data-wow-duration="1.1s">
                                 <div class="contact_info_thumb">
                                     <img src="assets/img/icon/email.webp" alt="">
                                 </div>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="contact_info_list center wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg2.webp" data-wow-delay="0.2s" data-wow-duration="1.2s">
+                            <div class="contact_info_list center wow fadeInUp" style="background-image: url('/img/others/gaming-world-bg2.webp')" data-wow-delay="0.2s" data-wow-duration="1.2s">
                                 <div class="contact_info_thumb">
                                     <img src="assets/img/icon/location.webp" alt="">
                                 </div>
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="contact_info_list right wow fadeInUp" data-bgimg="assets/img/others/gaming-world-bg3.webp" data-wow-delay="0.3s" data-wow-duration="1.3s">
+                            <div class="contact_info_list right wow fadeInUp" style="background-image: url('/img/others/gaming-world-bg3.webp')" data-wow-delay="0.3s" data-wow-duration="1.3s">
                                 <div class="contact_info_thumb">
                                     <img src="assets/img/icon/phone.webp" alt="">
                                 </div>
@@ -127,13 +127,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="gaming_update_inner d-flex justify-content-between align-items-center" data-bgimg="assets/img/bg/gaming-update.webp">
+                        <div class="gaming_update_inner d-flex justify-content-between align-items-center" style="background-image: url('/img/bg/gaming-update.webp')">
                             <div class="gaming_update_text">
                                 <h2>Connect with us <br>
                                     for gamING update.</h2>
                             </div>
                             <div class="gaming_update_btn">
-                                <a class="btn btn-link" href="#">CONNECT NOW <img src="assets/img/icon/arrrow-icon.webp" alt=""> </a>
+                                <a class="btn btn-link" href="#">CONNECT NOW <img src="{{asset('img/icon/arrow-icon.webp')}}" alt=""> </a>
                             </div>
                         </div>
                     </div>

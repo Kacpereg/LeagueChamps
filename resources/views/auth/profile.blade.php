@@ -4,14 +4,14 @@
 
 
 <!-- breadcrumbs area start -->
-    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" data-bgimg="assets/img/bg/breadcrumbs-bg.webp">
+    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" style = "background-image: url('img/bg/breadcrumbs-bg.webp')">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text text-center">
                         <h1>Profile - {{$user->name}}</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li> profile</li>
                         </ul>
@@ -32,14 +32,14 @@
                         <div class="single-player-details">
                             <div class="side__left">
                                 <div class="image">
-                                    <img class="img-fluid" src="{{asset('img/player/details/player-details-img.webp')}}" alt="">
+                                    <img class="img-fluid" src="{{$user->avatar ? asset('/storage/avatars/' . $user->avatar) :asset('/images/defaultavatar.png')}}" alt="">
                                 </div>
 
                                 <div class="player-profile">
-                                    <h4 class="title">{{$user->name}}</h4>
-                                    <h5 class="level-text">36 LEVEL COMPLETED</h5>
+                                    <h4 class="title">{{$user->ign}}</h4>
+                                    <h5 class="level-text">RANK: {{$rank}} LP, MMR: {{$mmr}}</h5>
                                     <div class="content-shape-img">
-                                        <img src="{{asset('/img/others/tam-text-shape2.webp')}}" alt="">
+                                        <img src="{{asset('img/others/tam-text-shape2.webp')}}" alt="">
                                     </div>
                                 </div>
 
@@ -53,18 +53,16 @@
                             <div class="side__right">
                                 <div class="content">
                                     <span class="title-tag">PLAYER PROFILE</span>
-                                    <h4 class="title">IGN: {{$user->ign}}</h4>
-                                    <h2 class="title">SERVER: {{$user->server}}</h2>
+                                    <h4 class="title">{{$user->name}}, {{$user->server}}</h4>
                                     <p>
                                         {{$user->desc}}
                                     </p>
-
                                     <a class="btn btn-link" href="{{route('edit')}}">Edit Profile</a>
                                 </div>
                             </div>
 
                             <div class="mascot-logo">
-                                <img class="img-fluid" src="assets/img/others/player-bg-maskot.webp" alt="">
+                                <img class="img-fluid" src="{{asset('img/others/player-bg-maskot.webp')}}" alt="">
                             </div>
                         </div>
                     </div>

@@ -54,5 +54,6 @@ mix.scripts('resources/js/jquery.nice-select.js', 'public/js/jquery.nice-select.
 mix.scripts('resources/js/jquery.magnific-popup.min.js', 'public/js/jquery.magnific-popup.min.js');
 mix.scripts('resources/js/jquery.counterup.min.js', 'public/js/jquery.counterup.min.js');
 mix.scripts('resources/js/jquery-waypoints.js', 'public/js/jquery-waypoints.js');
+mix.scripts('resources/js/main.js', 'public/js/main.js');
 
 mix.copyDirectory('resources/img', 'public/img');

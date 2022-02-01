@@ -2,14 +2,14 @@
 
 @section('content')
 
-    <div class="breadcrumbs_aree breadcrumbs_bg" data-bgimg="assets/img/bg/breadcrumbs-bg.webp">
+    <div class="breadcrumbs_aree breadcrumbs_bg" style="background-image: url('/img/bg/breadcrumbs-bg.webp')">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text text-center">
                         <h1>FORUM</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li>  DISCUSSIONS</li>
                         </ul>

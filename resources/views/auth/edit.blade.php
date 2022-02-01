@@ -11,7 +11,7 @@
                     <div class="breadcrumbs_text text-center">
                         <h1>Profile - {{$user->name}}</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li> Edit profile</li>
                         </ul>
@@ -23,10 +23,10 @@
     <!-- breadcrumbs area end -->
 
     <div class="page_wrapper" style="margin-bottom: 50px">
-        <main class="signup-form">
+        <div class="signup-form">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-md-4">
+                    <div class="col-md-8">
                         <div class="card upcoming_gaming_list">
                             <h3 class="card-header text-center">Edit Profile</h3>
                             <div class="card-body">
@@ -51,9 +51,9 @@
 
                                     <div class="form-group mb-3">
                                         <select name="server" class="form-control">
-                                            <option value="EUW" selected>EUW</option>
-                                            <option value="EUNE">EUNE</option>
-                                            <option value="NA">NA</option>
+                                            <option value="EUW"     @if($user->server == 'EUW')    selected @endif>EUW</option>
+                                            <option value="EUNE"    @if($user->server == 'EUNE')   selected @endif>EUNE</option>
+                                            <option value="NA"      @if($user->server == 'NA')     selected @endif>NA</option>
                                         </select>
                                     </div>
 
@@ -67,23 +67,15 @@
 
                                     <div class="form-group mb-3">
                                         <input value = "{{ $user->ign }}" type="text" placeholder="In game Name" id="name" class="form-control" name="ign"
-                                               required autofocus>
+                                               autofocus>
                                         @if ($errors->has('ign'))
                                             <span class="text-danger">{{ $errors->first('ign') }}</span>
                                         @endif
                                     </div>
 
                                     <div class="form-group mb-3">
-                                        <input value = "{{ $user->avatar }}" type="text" placeholder="Avatar" id="name" class="form-control" name="avatar"
-                                               required autofocus>
-                                        @if ($errors->has('avatar'))
-                                            <span class="text-danger">{{ $errors->first('avatar') }}</span>
-                                        @endif
-                                    </div>
-
-                                    <div class="form-group mb-3">
                                         <input value = "{{ $user->desc }}" type="text" placeholder="Description" id="name" class="form-control" name="desc"
-                                               required autofocus>
+                                               autofocus>
                                         @if ($errors->has('desc'))
                                             <span class="text-danger">{{ $errors->first('desc') }}</span>
                                         @endif
@@ -91,17 +83,17 @@
 
                                     <div class="form-group mb-3">
                                         <select name="mainrole" class="form-control">
-                                            <option value="TOP" selected>TOP</option>
-                                            <option value="JUNGLE">JUNGLE</option>
-                                            <option value="MID">MID</option>
-                                            <option value="BOT">BOT</option>
-                                            <option value="SUPPORT">SUPPORT</option>
+                                            <option value="TOP"       @if($user->mainrole == 'TOP')     selected @endif>TOP</option>
+                                            <option value="JUNGLE"    @if($user->mainrole == 'JUNGLE')  selected @endif>JUNGLE</option>
+                                            <option value="MID"       @if($user->mainrole == 'MID')     selected @endif>MID</option>
+                                            <option value="BOT"       @if($user->mainrole == 'BOT')     selected @endif>BOT</option>
+                                            <option value="SUPPORT"   @if($user->mainrole == 'SUPPORT') selected @endif>SUPPORT</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group mb-3">
                                         <input value = "{{ $user->mainchamp }}" type="text" placeholder="Main champion" id="name" class="form-control" name="mainchamp"
-                                               required autofocus>
+                                               autofocus>
                                         @if ($errors->has('mainchamp'))
                                             <span class="text-danger">{{ $errors->first('mainchamp') }}</span>
                                         @endif
@@ -113,10 +105,25 @@
                                 </form>
 
                             </div>
+
+                            <div class="card-body">
+                                <form action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="d-grid mx-auto">
+                                            <input type="file" name="image" class="form-control">
+                                        </div>
+
+                                        <div class="d-grid mx-auto">
+                                            <button type="submit" class="btn btn-dark btn-block">Upload avatar</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 @endsection

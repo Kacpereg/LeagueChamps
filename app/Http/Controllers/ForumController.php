@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use App\Models\Post;
+use App\Models\Tournament;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class ForumController extends Controller
@@ -35,8 +38,16 @@ class ForumController extends Controller
 
     public function list()
     {
-        $posts=Post::all();
+        $posts=Post::orderBy('created_at', 'DESC')->get();
         return view('forum.forum', compact('posts'));
+    }
+
+    public function welcome()
+    {
+        $tournaments=Tournament::take(4)->where('date','>', Carbon::now()->format('Y-m-d'))->get();
+        $posts=Post::take(4)->orderBy('created_at', 'DESC')->get();
+        $users=User::all();
+        return view('welcome', compact('posts', 'users', 'tournaments'));
     }
 
     public function addComment(Request $request)

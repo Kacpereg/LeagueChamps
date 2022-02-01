@@ -1,6 +1,24 @@
 @extends('.layout.layout')
 
 @section('content')
+
+    <div class="breadcrumbs_aree breadcrumbs_bg" style = "background-image: url('img/bg/breadcrumbs-bg.webp')">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="breadcrumbs_text text-center">
+                        <h1>Create account</h1>
+                        <ul class="d-flex justify-content-center">
+                            <li><a href="{{route('welcome')}}">Home </a></li>
+                            <li> <span>//</span></li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- page wrapper start -->
 
     <div class="page_wrapper" style="margin-top: 100px; margin-bottom: 50px">
@@ -36,6 +54,14 @@
                                             <option value="EUNE">EUNE</option>
                                             <option value="NA">NA</option>
                                         </select>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <input type="text" placeholder="Summoner Name" id="ign" class="form-control"
+                                               name="ign" required autofocus>
+                                        @if ($errors->has('ign'))
+                                            <span class="text-danger">{{ $errors->first('ign') }}</span>
+                                        @endif
                                     </div>
 
                                     <div class="form-group mb-3">

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Client\RiotClient;
+use App\Models\Rank;
 use Illuminate\Http\Request;
 use Hash;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use function GuzzleHttp\Promise\all;
 
 class UserController extends Controller
 {
@@ -64,6 +67,7 @@ class UserController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'server' => $data['server'],
+            'ign' => $data['ign'],
             'date_of_birth' => $data['date_of_birth'],
             'password' => Hash::make($data['password'])
         ]);
@@ -82,7 +86,19 @@ class UserController extends Controller
     public function profile()
     {
         $user=Auth::user();
-        return view('auth.profile', compact('user'));
+        $riotClient=app(RiotClient::class);
+
+        $rank='';
+        if($user->ign){
+            $rank=$riotClient->getEntries($user)[0];
+        }
+
+        $mmr='';
+        if($user->ign){
+            $mmr=$riotClient->getEntries($user)[1];
+        }
+
+        return view('auth.profile', compact('user', 'rank', 'mmr'));
     }
 
     public function edit()
@@ -93,25 +109,11 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-
-        $request->validate([
-            'name' => 'required',
-            'email'=> 'required',
-            'server'=> 'required',
-            'ign'=> 'required',
-            'avatar'=> 'required',
-            'desc'=> 'required',
-            'mainrole'=> 'required',
-            'mainchamp'=> 'required',
-            'date_of_birth'=> 'required',
-        ]);
-
         $user=Auth::user();
         $user->name = $request->get('name');
         $user->email = $request->get('email');
         $user->server = $request->get('server');
         $user->ign = $request->get('ign');
-        $user->avatar = $request->get('avatar');
         $user->desc = $request->get('desc');
         $user->mainrole = $request->get('mainrole');
         $user->mainchamp = $request->get('mainchamp');
@@ -127,4 +129,76 @@ class UserController extends Controller
 
         return Redirect('login');
     }
+
+    public function imageUploadPost(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageName = Auth::id().'.'.$request->image->extension();
+
+        $request->image->move(storage_path('/app/public/avatars'), $imageName);
+
+        /* Store $imageName name in DATABASE from HERE */
+        $user=Auth::user();
+        $user->avatar=$imageName;
+        $user->save();
+
+        return back()->with('success','You have successfully upload image.')->with('image',$imageName);
+    }
+
+    public function showHighscores(){
+
+
+        $users=User::all();
+        $riotClient=app(RiotClient::class);
+
+        $rank='';
+        $mmr='';
+        $rankArray=[];
+        foreach($users as $user){
+            $rank=Rank::where('user_id', $user->id)->first();
+            if($rank){
+                $rankArray[]=['user'=>$user, 'rank'=>$rank->rank, 'mmr'=>$rank->mmr];
+            } else {
+                $entries=$riotClient->getEntries($user);
+                $rank = new Rank();
+                $rank->user_id=$user->id;
+                $rank->rank=$entries[0];
+                $rank->mmr=$entries[1];
+                $rank->save();
+                $rankArray[]=['user'=>$user, 'rank'=>$rank->rank, 'mmr'=>$rank->mmr];
+            }
+        }
+
+        usort($rankArray, function ($a, $b){
+            return $a['mmr']<$b['mmr'];
+        });
+
+        return view('tournament.highscores', compact('rankArray'));
+    }
+
+    public function customProfile(string $name){
+        $user=User::where('name', $name)->first();
+        if (! $user){
+            return redirect()->back()->with('error', 'there is no user');
+        }
+        $riotClient=app(RiotClient::class);
+
+        $rank='';
+        if($user->ign){
+            $rank=$riotClient->getEntries($user)[0];
+        }
+
+        $mmr='';
+        if($user->ign){
+            $mmr=$riotClient->getEntries($user)[1];
+        }
+
+        return view('auth.customprofile', compact('user', 'rank', 'mmr'));
+
+    }
+
+
 }

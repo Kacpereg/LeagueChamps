@@ -3,25 +3,26 @@
 @section('content')
 
     <!-- breadcrumbs area start -->
-    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" data-bgimg="assets/img/bg/breadcrumbs-bg.webp">
+    <div class="breadcrumbs_aree breadcrumbs_bg mb-140" style="background-image: url('/img/bg/breadcrumbs-bg.webp');">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumbs_text text-center">
                         <h1>Forum</h1>
                         <ul class="d-flex justify-content-center">
-                            <li><a href="index.html">Home </a></li>
+                            <li><a href="{{route('welcome')}}">Home </a></li>
                             <li> <span>//</span></li>
                             <li>discussions</li>
                         </ul>
                     </div>
                     <div class="sing_up_btn text-center mt-5">
-                        <a class="btn btn-link" href="{{route('posts.create')}}">CREATE A POST <img src="assets/img/icon/arrrow-icon2.webp" alt=""> </a>
+                        <a class="btn btn-link" href="{{route('posts.create')}}">CREATE A POST <img src={{asset('img/icon/arrow-icon2.webp')}} alt=""> </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <section class="blog_details_section mb-130">
         <div class="container">
@@ -38,14 +39,6 @@
                             </div>
                             <div class="blog_details_title">
                                 <h2>{{$post->title}}</h2>
-                            </div>
-                            <div class="widget_tags">
-                                <ul>
-                                    <li><a href="#">Advanture</a></li>
-                                    <li><a href="#">Gamming</a></li>
-                                    <li><a href="#"> Esport’s</a></li>
-                                    <li><a href="#">Fighter</a></li>
-                                </ul>
                             </div>
                         </div>
                         <div class="blog_sticky_thumb">
