@@ -29,11 +29,10 @@ class UserController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('/')
-                ->withSuccess('Signed in');
+            return redirect("/")->with('success', 'Successfully signed in');
         }
 
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("login")->with('error', 'Wrong credentials! Try again.');
     }
 
 
@@ -57,7 +56,7 @@ class UserController extends Controller
         $data = $request->all();
         $check = $this->create($data);
 
-        return redirect("/")->withSuccess('You have signed-in');
+        return redirect("/")->with('success', 'You have created an account');
     }
 
 
@@ -80,7 +79,7 @@ class UserController extends Controller
             return view('adminlte.layout');
         }
 
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return redirect("login")->with('success', 'You are not allowed to access');
     }
 
     public function profile()
@@ -120,14 +119,14 @@ class UserController extends Controller
         $user->date_of_birth = $request->get('date_of_birth');
         $user->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('success', 'You have successfully updated Your profile');
     }
 
     public function signOut() {
         Session::flush();
         Auth::logout();
 
-        return Redirect('login');
+        return redirect('/')->with('success', 'You have successfully logged out');
     }
 
     public function imageUploadPost(Request $request)
@@ -145,7 +144,7 @@ class UserController extends Controller
         $user->avatar=$imageName;
         $user->save();
 
-        return back()->with('success','You have successfully upload image.')->with('image',$imageName);
+        return back()->with('success','You have successfully uploaded Your image.')->with('image',$imageName);
     }
 
     public function showHighscores(){
@@ -182,7 +181,7 @@ class UserController extends Controller
     public function customProfile(string $name){
         $user=User::where('name', $name)->first();
         if (! $user){
-            return redirect()->back()->with('error', 'there is no user');
+            return redirect()->back()->with('error', 'There is no user');
         }
         $riotClient=app(RiotClient::class);
 

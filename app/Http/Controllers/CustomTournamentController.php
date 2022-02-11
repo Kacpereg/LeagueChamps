@@ -46,11 +46,11 @@ class CustomTournamentController extends Controller
 
         $players=$tournament->players;
         if(count($players)==4){
-            return redirect()->back()->with('error','there is already 4 players in this tournament');
+            return redirect()->back()->with('error','There is already 4 players in this tournament');
         }
 
         if(in_array(Auth::id(), $players)){
-            return redirect()->back()->with('error','you are already registered to this tournament');
+            return redirect()->back()->with('error','You are already registered to this tournament');
         }
 
         $players[]=Auth::id();
@@ -59,7 +59,8 @@ class CustomTournamentController extends Controller
         if(count($players)===4){
             $this->createBrackets($tournament);
         }
-        return redirect()->back()->with('success','succesfully registered into tournament');
+
+        return redirect()->back()->with('success','Succesfully registered into tournament');
     }
 
     public function createBrackets(Tournament $tournament){
@@ -100,7 +101,7 @@ class CustomTournamentController extends Controller
         $match2->save();
 
 
-        return redirect()->back()->with('success', 'created brackets');
+        return redirect()->back()->with('success', 'Created brackets');
     }
 
 }

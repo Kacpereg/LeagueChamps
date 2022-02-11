@@ -6,3 +6,16 @@
     height: 70%;
 }
 
+html.js.swal2-shown.swal2-height-auto.sizes.customelements.history.pointerevents.postmessage.webgl.websockets.cssanimations.csscolumns.csscolumns-width.csscolumns-span.csscolumns-fill.csscolumns-gap.csscolumns-rule.csscolumns-rulecolor.csscolumns-rulestyle.csscolumns-rulewidth.no-csscolumns-breakbefore.no-csscolumns-breakafter.no-csscolumns-breakinside.flexbox.picture.srcset.webworkers body.body__bg.swal2-shown.swal2-height-auto div.swal2-container.swal2-center.swal2-backdrop-show div.swal2-popup.swal2-modal.swal2-icon-success.swal2-show div.nice-select.swal2-select
+{
+    display: none;
+}
+
+html.js.swal2-shown.swal2-height-auto.sizes.customelements.history.pointerevents.postmessage.webgl.websockets.cssanimations.csscolumns.csscolumns-width.csscolumns-span.csscolumns-fill.csscolumns-gap.csscolumns-rule.csscolumns-rulecolor.csscolumns-rulestyle.csscolumns-rulewidth.no-csscolumns-breakbefore.no-csscolumns-breakafter.no-csscolumns-breakinside.flexbox.picture.srcset.webworkers body.body__bg.swal2-shown.swal2-height-auto div.swal2-container.swal2-center.swal2-backdrop-show div.swal2-popup.swal2-modal.swal2-icon-error.swal2-show div.nice-select.swal2-select
+{
+    display: none;
+}
+body > div.swal2-container.swal2-center.swal2-backdrop-show > div > div.nice-select.swal2-select
+{
+    display: none;
+}

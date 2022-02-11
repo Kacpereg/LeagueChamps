@@ -58,7 +58,7 @@
                                     </div>
 
                                     <div class="d-grid mx-auto">
-                                        <button type="submit" class="btn btn-dark btn-block">Signin</button>
+                                        <button type="submit" class="btn btn-dark btn-block">Sign in</button>
                                     </div>
                                     <div class="mt-3">
                                         <span>Don't have account?</span>

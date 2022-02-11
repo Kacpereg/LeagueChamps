@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,6 +31,7 @@
 </head>
 
 <body class="body__bg" style="background-image: url('img/bg/body-bg.webp'); background-color: #0D0334">
+
 
 <!--offcanvas menu area start-->
 <div class="offcanvas_menu">
@@ -117,6 +119,27 @@
     </div>
 </header>
 <!--header area end-->
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if ( session()->has('error') )
+    <script type="text/javascript">
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '{{session()->get('error')}}',
+        })
+    </script>
+@endif
+@if ( session()->has('success') )
+    <script type="text/javascript">
+        Swal.fire({
+            icon: 'success',
+            title: 'Nice!',
+            text: '{{session()->get('success')}}',
+        })
+    </script>
+@endif
+
 @yield('content')
 
     <!--footer area start-->
@@ -248,6 +271,7 @@
 <script src="{{ mix("js/jquery.counterup.min.js") }}"></script>
 <script src="{{ mix("js/jquery-waypoints.js") }}"></script>
 <script src="{{mix("js/main.js") }}"></script>
+
 
 
 <!-- Main JS -->

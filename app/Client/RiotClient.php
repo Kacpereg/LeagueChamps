@@ -21,7 +21,7 @@ class RiotClient
 //  Initialize the library
         $api = new LeagueAPI([
             //  Your API key, you can get one at https://developer.riotgames.com/
-            LeagueAPI::SET_KEY => 'RGAPI-1ca57aed-f312-4666-9603-de3cc7aaba2d',
+            LeagueAPI::SET_KEY => 'RGAPI-01627e3e-5d6e-4d2b-90bd-5a3b806e9aad',
             //  Target region (you can change it during lifetime of the library instance)
             LeagueAPI::SET_REGION => strtolower($user->server),
         ]);

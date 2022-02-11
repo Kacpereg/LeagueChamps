@@ -22,12 +22,12 @@ class ForumController extends Controller
             'title'=>'required',
             'text'=>'required',
         ]);
-        $post= Post::create([
+        Post::create([
             'title' => $request->get('title'),
             'text' => $request->get('text'),
             'user_id' => Auth::id()
         ]);
-        return $this->showPost($post);
+        return redirect('/forum')->with('success', 'You have created a post');
     }
 
     public function showPost(Post $post)
